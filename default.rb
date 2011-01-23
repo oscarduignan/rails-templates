@@ -6,7 +6,7 @@ def after_setup(&block)
 end
 
 @generators = {}
-def generator(k, *v)
+def generator(k, v)
   @generators[k] = v
 end
 
