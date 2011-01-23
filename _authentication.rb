@@ -6,8 +6,8 @@ if yes?("Install Devise?")
 
   after_setup do
     generate "devise:install"
-    generate "devise:user"
     generate "devise:views"
+    generate "devise user"
   end
 
   inject_into_file 'config/environments/development.rb', :before => "\nend" do

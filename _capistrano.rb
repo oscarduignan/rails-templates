@@ -1,3 +1,5 @@
 gem "capistrano"
 
-capify!
+after_setup do
+  capify!
+end

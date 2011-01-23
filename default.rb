@@ -22,14 +22,16 @@ apply_local [
   "_sass.rb",
   "_compass.rb",
   "_jquery.rb",
+  "_modernizr.rb",
   "_forms.rb",
   "_security.rb",
   "_testing.rb",
   "_capistrano.rb",
   "_authentication.rb",
   "_generators.rb",
-  "_bundle.rb",
-  "_git.rb"
+  "_bundle.rb"
 ]
 
 @after_setup.each { |b| b.call }
+
+apply_local ["_git.rb"]

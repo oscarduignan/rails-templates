@@ -43,15 +43,15 @@ file "app/stylesheets/library/_typography.scss", <<-EOF
   line-height: $lines * (1em * ($base_line_height / $font_size));
 }
 
-@mixin leading-above($lines, $font_size: $base_font_size, $property="margin") {
+@mixin leading-above($lines, $font_size: $base_font_size, $property: "margin") {
   \#{$property}-top: $lines * (1em * ($base_line_height / $font_size));
 }
 
-@mixin leading-below($lines, $font_size: $base_font_size, $property="margin") { 
+@mixin leading-below($lines, $font_size: $base_font_size, $property: "margin") { 
   \#{$property}-bottom: $lines * (1em * ($base_line_height / $font_size));
 }
 
-@mixin leading($above, $below, $font_size: $base_font_size, $property="margin") {
+@mixin leading($above, $below, $font_size: $base_font_size, $property: "margin") {
   @include leading-above($above, $font_size, $property);
   @include leading-below($below, $font_size, $property);
 }
