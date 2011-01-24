@@ -19,6 +19,10 @@ $base_line_height: 24px !default;
 
 @import "library";
 
+html {
+  background-color: #6B72BF;
+}
+
 body {
   @include body-font-family;
   font-size: $base_font_size / (16px / 100%);
@@ -26,10 +30,22 @@ body {
   width: $layout_width;
   margin: (($base_line_height / $base_font_size) * 2em) auto;
   color: #333;
+  padding:0 24px;
+  @include leading(0.5, 1, 16px, "padding");
+  @include box-shadow(#333, 5px, 5px, 24px);
 }
 
 html>body {
   font-size: $base_font_size;
+}
+
+h1, h2 {
+  @include font-size(32px);
+  font-weight: bold;
+}
+
+input, select, textarea {
+  @include font-size(16px);
 }
 EOF
 

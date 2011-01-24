@@ -29,7 +29,8 @@ apply_local [
   "_capistrano.rb",
   "_authentication.rb",
   "_generators.rb",
-  "_bundle.rb"
+  "_bundle.rb",
+  "_pages.rb"
 ]
 
 @after_setup.each { |b| b.call }

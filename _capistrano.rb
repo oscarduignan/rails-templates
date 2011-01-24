@@ -1,5 +1,7 @@
-gem "capistrano"
+if yes?("Capify?")
+  gem "capistrano"
 
-after_setup do
-  capify!
+  after_setup do
+    capify!
+  end
 end
